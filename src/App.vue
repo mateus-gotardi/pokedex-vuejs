@@ -1,6 +1,17 @@
-<script setup></script>
-
 <template>
-  <h1>Header</h1>
-  <RouterView />
+  <Header />
+  <router-view />
 </template>
+
+<script>
+import Header from "./components/header.vue";
+export default {
+  name: "App",
+  components: {
+    Header,
+  },
+  data: () => ({
+    //
+  }),
+};
+</script>

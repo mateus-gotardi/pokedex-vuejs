@@ -8,7 +8,6 @@ export const usePokemonStore = defineStore('pokemons', {
             abilities: [],
             height: 0,
             id: 0,
-            evolvesFromSpecies: null,
             moves: [],
             name: '',
             sprites: {},
@@ -21,19 +20,15 @@ export const usePokemonStore = defineStore('pokemons', {
                 speed: 0,
             },
         },
-        searchedPokemon: '',
+        error: '',
     }),
-    getters: {
-        pokemonDetails: (state) => state.pokemonDetails,
-        evolutionChain: (state) => state.evolutionChain,
-        allPokemons: (state) => state.allPokemons,
-    },
     actions: {
         async fetchAllPokemons() {
             const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0')
             const data = await response.json()
             this.allPokemons = data.results
         },
+
         async fetchPokemonDetails(pokemonName) {
             const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
             const data = await response.json()
@@ -55,24 +50,36 @@ export const usePokemonStore = defineStore('pokemons', {
             }
         },
         async fetchEvolutionChain(pokemonName) {
-            const response = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${pokemonName}`)
-            const data = await response.json()
-            const evolutionChainUrl = data.evolution_chain.url
-            const evolutionChainResponse = await fetch(evolutionChainUrl)
-            const evolutionChainData = await evolutionChainResponse.json()
-            this.evolutionChain = []
-            this.evolutionChain.push(evolutionChainData.chain.species.name)
-            evolutionChainData.chain.evolves_to.forEach((evolution) => {
-                this.evolutionChain.push(evolution.species.name)
-                evolution.evolves_to.forEach((evolution) => {
-                    this.evolutionChain.push(evolution.species.name)
-                    if (evolution.evolves_to.length > 0) {
-                        evolution.evolves_to.forEach((evolution) => {
-                            this.evolutionChain.push(evolution.species.name)
-                        })
-                    }
+            const response = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${pokemonName}`).then(async (response) => {
+                this.error = ''
+                const data = await response.json()
+                const evolutionChainUrl = data.evolution_chain.url
+                const evolutionChainResponse = await fetch(evolutionChainUrl)
+                const evolutionChainData = await evolutionChainResponse.json()
+                this.evolutionChain = []
+                // get sprites for each pokemon in the evolution chain
+                let pokeResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
+                let pokeData = await pokeResponse.json()
+                let poke = { name: evolutionChainData.chain.species.name, sprites: pokeData.sprites }
+                this.evolutionChain.push(poke)
+                evolutionChainData.chain.evolves_to.forEach(async (evolution) => {
+                    let pokeResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${evolution.species.name}`)
+                    let pokeData = await pokeResponse.json()
+                    let poke = { name: evolution.species.name, sprites: pokeData.sprites }
+                    this.evolutionChain.push(poke)
+                    evolution.evolves_to.forEach(async (evolution) => {
+                        let pokeResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${evolution.species.name}`)
+                        let pokeData = await pokeResponse.json()
+                        let poke = { name: evolution.species.name, sprites: pokeData.sprites }
+                        this.evolutionChain.push(poke)
+                    })
                 })
+                return response
+            }).catch((error) => {
+                this.evolutionChain = []
+                this.error = 'Pokémon não encontrado'
             })
+
         }
     },
 

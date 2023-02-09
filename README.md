@@ -5,9 +5,14 @@ esse projeto foi desenvolvido como teste técnico para uma vaga de emprego
 # Tecnologias Utilizadas
 
 Vue 3 + Vite
+
 Pinia
+
 Vue-Router
+
 PokéAPI
+
+Sass
 
 # Diretrizes do Desafio
 
