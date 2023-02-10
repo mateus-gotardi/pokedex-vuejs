@@ -758,7 +758,7 @@
 <rect id="Arbusto 4" x="382" y="15" width="16" height="16" fill="url(#pattern752)"/>
 <rect id="small tree 3" x="384" y="28" width="16" height="30" fill="url(#pattern753)"/>
 <rect id="Big Tree -1 1" x="337" y="28" width="62" height="84" fill="url(#pattern754)"/>
-<rect id="Big Tree -1 2" x="1" y="193" width="62" height="84" fill="url(#pattern755)"/>
+<rect id="Big Tree -1 2" x="2" y="262" width="62" height="84" fill="url(#pattern755)"/>
 <rect id="small tree 4" x="390" y="82" width="16" height="30" fill="url(#pattern756)"/>
 <rect id="small tree 5" x="385" y="87" width="16" height="30" fill="url(#pattern757)"/>
 <rect id="small tree 6" x="358" y="87" width="16" height="30" fill="url(#pattern758)"/>
@@ -767,8 +767,8 @@
 <rect id="Tree 39_2" x="113" y="55" width="42" height="61" fill="url(#pattern761)"/>
 <rect id="Arbusto 7" x="343" y="98" width="16" height="16" fill="url(#pattern762)"/>
 <rect id="small tree 11" x="407" y="89" width="16" height="30" fill="url(#pattern763)"/>
-<rect id="Arbusto 14" x="208" y="192" width="16" height="16" fill="url(#pattern764)"/>
-<rect id="Arbusto 15" x="224" y="192" width="16" height="16" fill="url(#pattern765)"/>
+<rect id="Arbusto 14" x="205" y="260" width="16" height="16" fill="url(#pattern764)"/>
+<rect id="Arbusto 15" x="221" y="260" width="16" height="16" fill="url(#pattern765)"/>
 <rect id="Capa 3 1" x="192" y="48" width="16" height="16" fill="url(#pattern766)"/>
 <rect id="Capa 3 2" x="208" y="48" width="16" height="16" fill="url(#pattern767)"/>
 <rect id="Capa 3 3" x="224" y="48" width="16" height="16" fill="url(#pattern768)"/>
@@ -794,7 +794,7 @@
 <rect id="Capa 11 1" x="272" y="32" width="16" height="16" fill="url(#pattern788)"/>
 <rect id="Capa 11 4" x="256" width="16" height="16" fill="url(#pattern789)"/>
 <rect id="Capa 11 2" x="304" width="16" height="16" fill="url(#pattern790)"/>
-<rect id="Capa 1 4" x="448" y="205" width="16" height="27" fill="url(#pattern791)"/>
+<rect id="Capa 1 4" x="445" y="273" width="16" height="27" fill="url(#pattern791)"/>
 <rect id="Capa 11 3" x="288" y="16" width="16" height="16" fill="url(#pattern792)"/>
 <rect id="algas 2" x="193" y="25" width="15" height="22" fill="url(#pattern793)"/>
 <rect id="algas 1" x="272" y="10" width="15" height="22" fill="url(#pattern794)"/>
@@ -806,27 +806,27 @@
 <rect id="water rock 2" x="304" y="32" width="32" height="32" fill="url(#pattern800)"/>
 <rect id="lilypad 3" x="169" y="58" width="14" height="11" fill="url(#pattern801)"/>
 <rect id="Capa 2 1_2" x="406" y="4" width="29" height="27" fill="url(#pattern802)"/>
-<rect id="Capa 2 4" x="451" y="216" width="29" height="27" fill="url(#pattern803)"/>
-<rect id="Capa 2 2" x="426" y="213" width="29" height="27" fill="url(#pattern804)"/>
-<rect id="Capa 2 3" x="440" y="225" width="29" height="27" fill="url(#pattern805)"/>
+<rect id="Capa 2 2" x="423" y="281" width="29" height="27" fill="url(#pattern803)"/>
+<rect id="Capa 2 4" x="448" y="284" width="29" height="27" fill="url(#pattern804)"/>
+<rect id="Capa 2 3" x="437" y="293" width="29" height="27" fill="url(#pattern805)"/>
 <g id="trees-4">
-<rect id="Tree 17" x="73" y="193" width="42" height="61" fill="url(#pattern806)"/>
-<rect id="Tree 30" x="350" y="192" width="42" height="61" fill="url(#pattern807)"/>
-<rect id="Tree 21" x="270" y="188" width="42" height="61" fill="url(#pattern808)"/>
-<rect id="Tree 19" x="174" y="188" width="42" height="61" fill="url(#pattern809)"/>
-<rect id="Tree 18" x="126" y="188" width="42" height="61" fill="url(#pattern810)"/>
-<rect id="Tree 23" x="318" y="188" width="42" height="61" fill="url(#pattern811)"/>
-<rect id="Tree 20" x="222" y="188" width="42" height="61" fill="url(#pattern812)"/>
-<rect id="Tree 24" x="98" y="213" width="42" height="61" fill="url(#pattern813)"/>
-<rect id="Tree 25" x="289" y="210" width="42" height="61" fill="url(#pattern814)"/>
-<rect id="Tree 26" x="193" y="210" width="42" height="61" fill="url(#pattern815)"/>
-<rect id="Tree 27" x="145" y="210" width="42" height="61" fill="url(#pattern816)"/>
-<rect id="Tree 28" x="337" y="210" width="42" height="61" fill="url(#pattern817)"/>
-<rect id="Tree 29" x="241" y="210" width="42" height="61" fill="url(#pattern818)"/>
-<rect id="Capa 1 3" x="189" y="78" width="16" height="27" fill="url(#pattern819)"/>
-<rect id="Capa 1 5" x="202" y="85" width="16" height="27" fill="url(#pattern820)"/>
-<rect id="Capa 1 6" x="213" y="87" width="16" height="27" fill="url(#pattern821)"/>
-<rect id="Capa 1 7" x="227" y="84" width="16" height="27" fill="url(#pattern822)"/>
+<rect id="Tree 17" x="74" y="257" width="42" height="61" fill="url(#pattern806)"/>
+<rect id="Tree 30" x="351" y="256" width="42" height="61" fill="url(#pattern807)"/>
+<rect id="Tree 21" x="271" y="252" width="42" height="61" fill="url(#pattern808)"/>
+<rect id="Tree 19" x="175" y="252" width="42" height="61" fill="url(#pattern809)"/>
+<rect id="Tree 18" x="127" y="252" width="42" height="61" fill="url(#pattern810)"/>
+<rect id="Tree 23" x="319" y="252" width="42" height="61" fill="url(#pattern811)"/>
+<rect id="Tree 20" x="223" y="252" width="42" height="61" fill="url(#pattern812)"/>
+<rect id="Tree 24" x="99" y="277" width="42" height="61" fill="url(#pattern813)"/>
+<rect id="Tree 25" x="290" y="274" width="42" height="61" fill="url(#pattern814)"/>
+<rect id="Tree 26" x="194" y="274" width="42" height="61" fill="url(#pattern815)"/>
+<rect id="Tree 27" x="146" y="274" width="42" height="61" fill="url(#pattern816)"/>
+<rect id="Tree 28" x="338" y="274" width="42" height="61" fill="url(#pattern817)"/>
+<rect id="Tree 29" x="242" y="274" width="42" height="61" fill="url(#pattern818)"/>
+<rect id="Capa 1 3" x="190" y="78" width="16" height="27" fill="url(#pattern819)"/>
+<rect id="Capa 1 5" x="203" y="85" width="16" height="27" fill="url(#pattern820)"/>
+<rect id="Capa 1 6" x="214" y="87" width="16" height="27" fill="url(#pattern821)"/>
+<rect id="Capa 1 7" x="228" y="84" width="16" height="27" fill="url(#pattern822)"/>
 </g>
 <rect id="Capa 1 3_2" x="240" y="79" width="16" height="27" fill="url(#pattern823)"/>
 <rect id="Capa 13 1" x="161" y="143" width="11" height="17" fill="url(#pattern824)"/>
@@ -834,37 +834,17 @@
 <rect id="Capa 13 2" x="245" y="126" width="11" height="17" fill="url(#pattern826)"/>
 <rect id="Capa 14 1" x="94" y="160" width="11" height="17" transform="rotate(-90 94 160)" fill="url(#pattern827)"/>
 <rect id="Capa 14 2" x="400" y="166" width="11" height="17" transform="rotate(-90 400 166)" fill="url(#pattern828)"/>
-<g id="trees -3">
-<rect id="Tree 17_2" x="130" y="264" width="42" height="61" fill="url(#pattern829)"/>
-<rect id="Tree 21_2" x="322" y="264" width="42" height="61" fill="url(#pattern830)"/>
-<rect id="Tree 19_2" x="226" y="264" width="42" height="61" fill="url(#pattern831)"/>
-<rect id="Tree 18_2" x="178" y="264" width="42" height="61" fill="url(#pattern832)"/>
-<rect id="Tree 23_2" x="370" y="264" width="42" height="61" fill="url(#pattern833)"/>
-<rect id="Tree 20_2" x="274" y="264" width="42" height="61" fill="url(#pattern834)"/>
-<rect id="Tree 24_2" x="149" y="286" width="42" height="61" fill="url(#pattern835)"/>
-<rect id="Tree 25_2" x="341" y="286" width="42" height="61" fill="url(#pattern836)"/>
-<rect id="Tree 26_2" x="245" y="286" width="42" height="61" fill="url(#pattern837)"/>
-<rect id="Tree 27_2" x="197" y="286" width="42" height="61" fill="url(#pattern838)"/>
-<rect id="Tree 28_2" x="389" y="286" width="42" height="61" fill="url(#pattern839)"/>
-<rect id="Tree 29_2" x="293" y="286" width="42" height="61" fill="url(#pattern840)"/>
-<rect id="Tree 30_2" x="128" y="316" width="42" height="61" fill="url(#pattern841)"/>
-<rect id="Tree 31" x="320" y="316" width="42" height="61" fill="url(#pattern842)"/>
-<rect id="Tree 32" x="224" y="316" width="42" height="61" fill="url(#pattern843)"/>
-<rect id="Tree 33" x="176" y="316" width="42" height="61" fill="url(#pattern844)"/>
-<rect id="Tree 34" x="368" y="316" width="42" height="61" fill="url(#pattern845)"/>
-<rect id="Tree 35" x="272" y="316" width="42" height="61" fill="url(#pattern846)"/>
-</g>
-<rect id="Big Tree -2 1" x="33" y="-26" width="62" height="108" fill="url(#pattern847)"/>
-<rect id="Big Tree -2 2" x="41" y="208" width="62" height="108" fill="url(#pattern848)"/>
-<rect id="small tree 2" x="97" y="86" width="16" height="30" fill="url(#pattern849)"/>
-<rect id="Tree 46" x="4" y="54" width="42" height="61" fill="url(#pattern850)"/>
-<rect id="Tree 48" x="66" y="46" width="42" height="61" fill="url(#pattern851)"/>
-<rect id="Tree 49" x="371" y="195" width="42" height="61" fill="url(#pattern852)"/>
-<rect id="Tree 50" x="399" y="207" width="42" height="61" fill="url(#pattern853)"/>
-<rect id="Tree 47" x="44" y="63" width="42" height="61" fill="url(#pattern854)"/>
-<rect id="Tree 42" x="258" y="56" width="42" height="61" fill="url(#pattern855)"/>
-<rect id="Tree 45" x="304" y="56" width="42" height="61" fill="url(#pattern856)"/>
-<rect id="Arbusto 9" x="294" y="95" width="16" height="16" fill="url(#pattern857)"/>
+<rect id="Big Tree -2 1" x="33" y="-26" width="62" height="108" fill="url(#pattern829)"/>
+<rect id="Big Tree -2 2" x="38" y="276" width="62" height="108" fill="url(#pattern830)"/>
+<rect id="small tree 2" x="97" y="86" width="16" height="30" fill="url(#pattern831)"/>
+<rect id="Tree 46" x="4" y="54" width="42" height="61" fill="url(#pattern832)"/>
+<rect id="Tree 48" x="66" y="46" width="42" height="61" fill="url(#pattern833)"/>
+<rect id="Tree 49" x="368" y="263" width="42" height="61" fill="url(#pattern834)"/>
+<rect id="Tree 50" x="396" y="275" width="42" height="61" fill="url(#pattern835)"/>
+<rect id="Tree 47" x="44" y="63" width="42" height="61" fill="url(#pattern836)"/>
+<rect id="Tree 42" x="258" y="56" width="42" height="61" fill="url(#pattern837)"/>
+<rect id="Tree 45" x="304" y="56" width="42" height="61" fill="url(#pattern838)"/>
+<rect id="Arbusto 9" x="294" y="95" width="16" height="16" fill="url(#pattern839)"/>
 </g>
 <defs>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
@@ -3355,13 +3335,13 @@
 <use xlink:href="#image28_0_1" transform="scale(0.0909091 0.0588235)"/>
 </pattern>
 <pattern id="pattern829" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image1_0_1" transform="scale(0.0238095 0.0163934)"/>
+<use xlink:href="#image29_0_1" transform="scale(0.016129 0.00925926)"/>
 </pattern>
 <pattern id="pattern830" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image1_0_1" transform="scale(0.0238095 0.0163934)"/>
+<use xlink:href="#image29_0_1" transform="scale(0.016129 0.00925926)"/>
 </pattern>
 <pattern id="pattern831" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image1_0_1" transform="scale(0.0238095 0.0163934)"/>
+<use xlink:href="#image14_0_1" transform="scale(0.0625 0.0333333)"/>
 </pattern>
 <pattern id="pattern832" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image1_0_1" transform="scale(0.0238095 0.0163934)"/>
@@ -3385,60 +3365,6 @@
 <use xlink:href="#image1_0_1" transform="scale(0.0238095 0.0163934)"/>
 </pattern>
 <pattern id="pattern839" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image1_0_1" transform="scale(0.0238095 0.0163934)"/>
-</pattern>
-<pattern id="pattern840" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image1_0_1" transform="scale(0.0238095 0.0163934)"/>
-</pattern>
-<pattern id="pattern841" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image1_0_1" transform="scale(0.0238095 0.0163934)"/>
-</pattern>
-<pattern id="pattern842" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image1_0_1" transform="scale(0.0238095 0.0163934)"/>
-</pattern>
-<pattern id="pattern843" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image1_0_1" transform="scale(0.0238095 0.0163934)"/>
-</pattern>
-<pattern id="pattern844" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image1_0_1" transform="scale(0.0238095 0.0163934)"/>
-</pattern>
-<pattern id="pattern845" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image1_0_1" transform="scale(0.0238095 0.0163934)"/>
-</pattern>
-<pattern id="pattern846" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image1_0_1" transform="scale(0.0238095 0.0163934)"/>
-</pattern>
-<pattern id="pattern847" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image29_0_1" transform="scale(0.016129 0.00925926)"/>
-</pattern>
-<pattern id="pattern848" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image29_0_1" transform="scale(0.016129 0.00925926)"/>
-</pattern>
-<pattern id="pattern849" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image14_0_1" transform="scale(0.0625 0.0333333)"/>
-</pattern>
-<pattern id="pattern850" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image1_0_1" transform="scale(0.0238095 0.0163934)"/>
-</pattern>
-<pattern id="pattern851" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image1_0_1" transform="scale(0.0238095 0.0163934)"/>
-</pattern>
-<pattern id="pattern852" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image1_0_1" transform="scale(0.0238095 0.0163934)"/>
-</pattern>
-<pattern id="pattern853" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image1_0_1" transform="scale(0.0238095 0.0163934)"/>
-</pattern>
-<pattern id="pattern854" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image1_0_1" transform="scale(0.0238095 0.0163934)"/>
-</pattern>
-<pattern id="pattern855" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image1_0_1" transform="scale(0.0238095 0.0163934)"/>
-</pattern>
-<pattern id="pattern856" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image1_0_1" transform="scale(0.0238095 0.0163934)"/>
-</pattern>
-<pattern id="pattern857" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image15_0_1" transform="scale(0.0625)"/>
 </pattern>
 <clipPath id="clip0_0_1">

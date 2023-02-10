@@ -7,9 +7,9 @@ export const usePokemonStore = defineStore('pokemons', {
         pokemonDetails: {
             abilities: [],
             height: 0,
+            weight: 0,
             id: 0,
             types: [],
-            moves: [],
             name: '',
             sprites: {},
             stats: {
@@ -51,9 +51,9 @@ export const usePokemonStore = defineStore('pokemons', {
             this.pokemonDetails = {
                 abilities: data.abilities,
                 height: data.height,
+                weight: data.weight,
                 id: data.id,
                 types: data.types,
-                moves: data.moves,
                 name: data.name,
                 sprites: data.sprites,
                 stats: {

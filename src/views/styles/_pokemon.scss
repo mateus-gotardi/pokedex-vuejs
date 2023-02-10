@@ -1,0 +1,195 @@
+@import '../../colors';
+
+#pokedex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: $white;
+
+    #poke-name {
+        font-size: 1rem;
+        font-weight: 600;
+        margin: .2rem;
+    }
+
+    #details {
+        width: 100%;
+        height: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+
+        #top-left {
+            grid-area: 1 / 1 / 2 / 5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 6rem;
+                aspect-ratio: 1/1;
+                object-fit: contain;
+            }
+
+            h2 {
+                font-size: 1rem;
+            }
+
+            ;
+
+
+        }
+
+        ;
+
+        #top-right {
+            grid-area: 1 / 5 / 2 / 11;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-start;
+
+            #life-bar {
+                width: 2rem;
+                height: .2rem;
+                background-color: $green;
+            }
+
+            #hp {
+                font-size: .7rem;
+                margin: .2rem;
+            }
+
+            
+
+
+            #poke-type {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: flex-end;
+
+                span {
+                    font-size: .7rem;
+                    margin-right: .2rem;
+                    margin-bottom: .2rem;
+                    padding: .1rem .3rem;
+                    border-radius: .3rem;
+                    border: $dark-grey 1px solid;
+                }
+
+                #normal {
+                    background-color: $beige;
+                    color: $white;
+                }
+
+                #fighting {
+                    background-color: $orange;
+                    color: $white;
+                }
+
+                #flying {
+                    background-color: $light-yellow;
+                    color: $white;
+                }
+
+                #poison {
+                    background-color: $purple;
+                    color: $white;
+                }
+
+                #ground,
+                #rock {
+                    background-color: $brown;
+                    color: $white;
+                }
+
+                #bug {
+                    background-color: $green;
+                    color: $white;
+                }
+
+                #ghost,
+                #ice {
+                    background-color: $light-blue;
+                    color: $white;
+                }
+
+                #steel {
+                    background-color: $dark-grey;
+                    color: $white;
+                }
+
+                #fire {
+                    background-color: $red;
+                    color: $white;
+                }
+
+                #water {
+                    background-color: $blue;
+                    color: $white;
+                }
+
+                #grass {
+                    background-color: $light-green;
+                    color: $white;
+                }
+
+                #electric {
+                    background-color: $yellow;
+                    color: $white;
+                }
+
+                #psychic {
+                    background-color: $light-purple;
+                    color: $white;
+                }
+
+                #dragon {
+                    background-color: $dark-red;
+                    color: $white;
+                }
+
+                #dark {
+                    background-color: $dark-grey;
+                    color: $white;
+                }
+
+                #fairy {
+                    background-color: $pink;
+                    color: $white;
+                }
+
+                #shadow {
+                    background-color: $dark-blue;
+                    color: $white;
+                }
+
+                #unknown {
+                    background-color: $white;
+                    color: $dark-grey;
+                }
+            }
+        }
+
+        ;
+
+        #bottom-left {
+            grid-area: 2 / 1 / 3 / 6;
+        }
+
+        ;
+
+        #bottom-right {
+            grid-area: 2 / 6 / 3 / 11;
+        }
+
+        ;
+    }
+}

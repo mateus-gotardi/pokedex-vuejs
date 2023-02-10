@@ -86,16 +86,15 @@ export default {
       this.pokemonStore.changeFacing('front');
     },
     selectPokemon() {
-      if (this.pokemonStore.evolutionChain.length > 0) {
-
+      if (this.pokemonStore.evolutionChain.length > 0 && !this.$route.params.name) {
         this.$router.push(`/pokemon/${this.pokemonStore.evolutionChain[this.pokemonStore.step].name}`)
       }
     },
     returnHome() {
       this.pokemonStore.step = 0;
       this.pokemonStore.changeFacing('front');
-      document.getElementById("scr-main").scrollLeft = this.posicaoScroll * this.pokemonStore.step;
       this.$router.push(`/`)
+      document.getElementById("scr-main").scrollLeft = this.posicaoScroll * this.pokemonStore.step;
     }
   },
 };

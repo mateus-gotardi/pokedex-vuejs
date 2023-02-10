@@ -3,7 +3,7 @@
         <section v-if="pokemonStore.evolutionChain.length > 0" id="pokemons-show"
             v-bind:style="{ gridTemplateColumns: `repeat(${this.pokemonStore.evolutionChain.length}, 1fr)` }">
             <div id="ash" v-bind:style="{ gridArea: `1 / ${pokemonStore.step + 1} / 2 / ${pokemonStore.step + 2}` }">
-                <img v-bind:src="`public/assets/ash-${this.pokemonStore.facing}${this.pokemonStore.facing === 'right' &&
+                <img v-bind:src="`/assets/ash-${this.pokemonStore.facing}${this.pokemonStore.facing === 'right' &&
                 this.pokemonStore.step % 2 !== 0 || this.pokemonStore.facing === 'left' && this.pokemonStore.step % 2 !== 0 ? '-1' : ''}.svg`"
                     alt="ash" />
             </div>

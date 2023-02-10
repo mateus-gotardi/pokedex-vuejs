@@ -20,6 +20,9 @@ body {
   justify-content: center;
   padding: .7rem;
   user-select: none;
+  @media only screen and (min-width: 480px) and (min-height: 890px) {
+    padding-top: 2rem;
+  }
 }
 
 
@@ -37,6 +40,17 @@ body {
   -moz-box-shadow: 4px 4px 11px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 4px 4px 11px 0px rgba(0, 0, 0, 0.75);
 
+  @media only screen and (min-width: 480px) and (min-height: 790px) {
+    width: 23rem;
+    height: 46rem;
+    padding: 2.5rem 1rem 0 1rem;
+  }
+
+  @media only screen and (min-width: 480px) and (min-height: 890px) {
+    width: 25rem;
+    height: 50rem;
+  }
+
   #scr-border {
     width: 18rem;
     height: 28rem;
@@ -48,10 +62,30 @@ body {
     align-items: center;
     justify-content: space-between;
 
+    @media only screen and (min-width: 480px) and (min-height: 790px) {
+      width: 21rem;
+      height: 44rem;
+    }
+
+    @media only screen and (min-width: 480px) and (min-height: 890px) {
+      width: 22rem;
+      height: 50rem;
+    }
+
     #screen {
       padding: 0;
       width: 14rem;
       height: 14rem;
+
+      @media only screen and (min-width: 480px) and (min-height: 790px) {
+        width: 16rem;
+        height: 16rem;
+      }
+
+      @media only screen and (min-width: 480px) and (min-height: 890px) {
+        width: 18rem;
+        height: 18rem;
+      }
     }
 
     #logo {
@@ -128,6 +162,10 @@ body {
       align-items: center;
       justify-content: space-between;
       width: 100%;
+
+      @media only screen and (min-width: 480px) and (min-height: 790px) {
+        width: 85%;
+      }
 
       #dpad {
         width: 6rem;
@@ -268,7 +306,7 @@ body {
       display: flex;
       gap: 1.7rem;
 
-      > div {
+      >div {
         display: flex;
         flex-direction: column;
         align-items: center;
