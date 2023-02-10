@@ -1,8 +1,10 @@
 @import url('https://fonts.cdnfonts.com/css/pokemon-solid');
-
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+@import url('https://fonts.cdnfonts.com/css/pretendo');
 
 * {
-  font-family: 'Pokemon Solid', sans-serif;
+  font-family: 'Press Start 2P', cursive;
   margin: 0;
   padding: 0;
 }
@@ -10,4 +12,263 @@
 body {
   background: rgb(59, 75, 202);
   background: radial-gradient(circle, rgba(59, 75, 202, 1) 0%, rgba(87, 176, 242, 1) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: .7rem;
+}
+
+#gbc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: fit-content;
+  height: 90vh;
+  padding: 1rem 1rem 0 1rem;
+  background-color: #FFE546;
+  border-radius: 10px 10px 100px 10px;
+
+  #scr-border {
+    width: inherit;
+    height: 15rem;
+    padding: 3rem 1rem;
+    background-color: black;
+    border-radius: 10px 40px 10px 40px;
+
+    #screen {
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    #logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      h1 {
+        font-family: 'Fugaz One', cursive;
+        font-size: 2rem;
+        color: #627071;
+
+        >span {
+          font-family: 'comic sans ms';
+          font-weight: bold;
+        }
+
+        ;
+
+        :first-child {
+          color: #bc5134;
+        }
+
+        :nth-child(2) {
+          color: #2B4796;
+        }
+
+        :nth-child(3) {
+          color: #80AE41;
+        }
+
+        :nth-child(4) {
+          color: #F2C94C;
+        }
+
+        :nth-child(5) {
+          color: #4ac5f2;
+        }
+      }
+    }
+  }
+
+  ;
+
+  #bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    border-radius: 0px 0px 100px 0px;
+    padding-bottom: 3.5rem;
+
+    #start {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      #watermark {
+        font-family: 'Pretendo', sans-serif;
+        font-size: 1.1rem;
+        color: #deba37;
+        border: 3px solid #deba37;
+        padding: .1rem .5rem;
+        border-radius: 15px;
+      }
+    }
+
+    #mid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      #dpad {
+        width: 6rem;
+        height: 6rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+
+
+        >div {
+          background-color: #2B4796;
+
+        }
+
+        #up,
+        #down,
+        #left,
+        #right {
+          -webkit-box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.75);
+          transition: all .2s ease-in-out;
+
+          &:active {
+            -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+            transform: skew(0deg, 0deg) translate(0px, 0px);
+          }
+        }
+
+        #up {
+          grid-area: 1 / 2 / 2 / 3;
+          border-radius: 10px 10px 0 0;
+
+        }
+
+        #left {
+          grid-area: 2 / 1 / 3 / 2;
+          border-radius: 10px 0 0 10px;
+        }
+
+        #right {
+          grid-area: 2 / 3 / 3 / 4;
+          border-radius: 0 10px 10px 0;
+        }
+
+        #down {
+          grid-area: 3 / 2 / 4 / 3;
+          border-radius: 0 0 10px 10px;
+        }
+
+        #center {
+          grid-area: 2 / 2 / 3 / 3;
+          z-index: 10;
+          box-shadow: none;
+        }
+      }
+
+      #buttons {
+        width: 6rem;
+        height: 6rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+
+        #a,
+        #b {
+          border-radius: 50%;
+          padding: 1rem;
+          font-size: 1rem;
+          -webkit-box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.75);
+          transition: all .2s ease-in-out;
+
+          &:active {
+            -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+            transform: scale(0.97);
+          }
+        }
+
+        #a {
+          background-color: #bc5134;
+          grid-area: 1 / 2 / 2 / 3;
+          color: #56281b;
+        }
+
+        #b {
+          background-color: #80AE41;
+          grid-area: 2 / 1 / 3 / 2;
+          color: #516b2d;
+        }
+      }
+    }
+
+    #poketm {
+      h1 {
+        padding: 0;
+        line-height: 2rem;
+        font-family: 'Pokemon Solid', sans-serif;
+        font-size: 3rem;
+        color: #FFE546;
+        -webkit-text-stroke: #2B4796;
+        -webkit-text-stroke-width: 2px;
+        text-shadow: 0px 0px 5px #2B4796;
+        transform: translate(0px, -1.2rem)rotate(10deg);
+      }
+    }
+
+    #end {
+      display: flex;
+      gap: 1.7rem;
+
+      #select,
+      #start {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: .5rem;
+
+        span {
+          width: 2.2rem;
+          height: .7rem;
+          background-color: #111212;
+          border-radius: 7px;
+          -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75);
+          transition: all .2s ease-in-out;
+        }
+
+        &:active {
+          span {
+            -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+            transform: scale(0.97);
+          }
+        }
+
+        p {
+          font-size: .5rem;
+          color: #deba37;
+        }
+      }
+    }
+  }
 }

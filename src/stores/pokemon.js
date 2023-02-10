@@ -21,8 +21,19 @@ export const usePokemonStore = defineStore('pokemons', {
             },
         },
         error: '',
+        step: 0,
     }),
     actions: {
+        addStep() {
+            if (this.step < this.evolutionChain.length - 1) {
+                this.step++
+            }
+        },
+        removeStep() {
+            if (this.step > 0) {
+                this.step--
+            }
+        },
         async fetchAllPokemons() {
             const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0')
             const data = await response.json()
@@ -82,5 +93,4 @@ export const usePokemonStore = defineStore('pokemons', {
 
         }
     },
-
 })

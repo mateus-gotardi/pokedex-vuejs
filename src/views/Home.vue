@@ -8,19 +8,20 @@
     <h3 v-if="pokemonStore.error !== ''">{{ pokemonStore.error }}</h3>
     <section v-if="pokemonStore.evolutionChain.length > 0">
       <div v-for="pokemon in pokemonStore.evolutionChain" :key="pokemon.name">
-        <router-link
-          :to="`/pokemon/${pokemon.name}`"
-        >
+        <router-link :to="`/pokemon/${pokemon.name}`">
           <div>
             <p>
               {{ pokemon.name }}
             </p>
-            <img
-              :src="pokemon.sprites.other['official-artwork'].front_default"
-              :alt="pokemon.name"
-            />
+            <img :src="pokemon.sprites.other['official-artwork'].front_default" :alt="pokemon.name" />
           </div>
         </router-link>
+      </div>
+      <div>
+
+        <button @click="this.pokemonStore.addStep">vai</button>
+        <button @click="this.pokemonStore.removeStep">volta</button>
+
       </div>
     </section>
   </main>
@@ -39,9 +40,11 @@ export default {
     };
   },
   methods: {
+
     onSubmit() {
       usePokemonStore().fetchEvolutionChain(this.inputValue.toLowerCase());
     },
+
   },
   mounted() {
     usePokemonStore().fetchAllPokemons();
