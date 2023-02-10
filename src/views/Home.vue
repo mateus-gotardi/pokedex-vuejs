@@ -1,42 +1,41 @@
 <template>
-  <main>
-    <form @submit.prevent="onSubmit">
-      <label to="poke-input">Pesquise seu Pokemon</label>
-      <input type="text" id="poke-input" v-model="inputValue" />
-      <input type="submit" value="Pesquisar" />
-    </form>
-    <h3 v-if="pokemonStore.error !== ''">{{ pokemonStore.error }}</h3>
-    <section v-if="pokemonStore.evolutionChain.length > 0">
-      <div v-for="pokemon in pokemonStore.evolutionChain" :key="pokemon.name">
-        <router-link :to="`/pokemon/${pokemon.name}`">
-          <div>
-            <p>
-              {{ pokemon.name }}
-            </p>
-            <img :src="pokemon.sprites.other['official-artwork'].front_default" :alt="pokemon.name" />
-          </div>
-        </router-link>
-      </div>
-      <div>
+  <main id="scr-main">
+    <div id="form-container">
+      <form @submit.prevent="onSubmit">
+        <label to="poke-input">Pesquise um Pokémon</label>
+        <div>
+          <input type="text" id="poke-input" v-model="inputValue" />
+          <button type="submit"><svg-icon type="mdi" :path="path" size="18"></svg-icon></button>
+        </div>
+        <h3 v-if="pokemonStore.error !== ''">{{ pokemonStore.error }}</h3>
+      </form>
+    </div>
 
-        <button @click="this.pokemonStore.addStep">vai</button>
-        <button @click="this.pokemonStore.removeStep">volta</button>
 
-      </div>
-    </section>
+    <ShowPokemons />
+
   </main>
 </template>
 
 <script>
 import { usePokemonStore } from "../stores/pokemon";
+import SvgIcon from '@jamescoyle/vue-icon';
+import { mdiMagnify } from '@mdi/js';
+import ShowPokemons from "../components/pokemonsShow.vue";
 
 export default {
-  name: "MyComponent",
+  name: "Home",
+  components: {
+    SvgIcon,
+    ShowPokemons
+  },
   data() {
     const pokemonStore = usePokemonStore();
     return {
       inputValue: "",
       pokemonStore,
+      path: mdiMagnify,
+      step: pokemonStore.step,
     };
   },
   methods: {
@@ -44,7 +43,7 @@ export default {
     onSubmit() {
       usePokemonStore().fetchEvolutionChain(this.inputValue.toLowerCase());
     },
-
+    
   },
   mounted() {
     usePokemonStore().fetchAllPokemons();

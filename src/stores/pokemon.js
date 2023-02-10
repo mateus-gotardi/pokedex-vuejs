@@ -8,6 +8,7 @@ export const usePokemonStore = defineStore('pokemons', {
             abilities: [],
             height: 0,
             id: 0,
+            types: [],
             moves: [],
             name: '',
             sprites: {},
@@ -22,6 +23,7 @@ export const usePokemonStore = defineStore('pokemons', {
         },
         error: '',
         step: 0,
+        facing: 'front',
     }),
     actions: {
         addStep() {
@@ -33,6 +35,9 @@ export const usePokemonStore = defineStore('pokemons', {
             if (this.step > 0) {
                 this.step--
             }
+        },
+        changeFacing(direction) {
+            this.facing = direction
         },
         async fetchAllPokemons() {
             const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0')
@@ -47,6 +52,7 @@ export const usePokemonStore = defineStore('pokemons', {
                 abilities: data.abilities,
                 height: data.height,
                 id: data.id,
+                types: data.types,
                 moves: data.moves,
                 name: data.name,
                 sprites: data.sprites,
@@ -67,6 +73,7 @@ export const usePokemonStore = defineStore('pokemons', {
                 const evolutionChainUrl = data.evolution_chain.url
                 const evolutionChainResponse = await fetch(evolutionChainUrl)
                 const evolutionChainData = await evolutionChainResponse.json()
+                this.step = 0
                 this.evolutionChain = []
                 // get sprites for each pokemon in the evolution chain
                 let pokeResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)

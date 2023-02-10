@@ -33,6 +33,7 @@ export default {
 
     return {
       pokemonStore,
+      step: 0,
     };
   },
   methods: {

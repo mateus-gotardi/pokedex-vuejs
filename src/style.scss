@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 @import url('https://fonts.cdnfonts.com/css/pretendo');
+@import 'colors';
+
 
 * {
   font-family: 'Press Start 2P', cursive;
@@ -17,30 +19,39 @@ body {
   align-items: center;
   justify-content: center;
   padding: .7rem;
+  user-select: none;
 }
+
 
 #gbc {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: fit-content;
-  height: 90vh;
+  width: 20rem;
+  height: 40rem;
   padding: 1rem 1rem 0 1rem;
-  background-color: #FFE546;
+  background-color: $yellow;
   border-radius: 10px 10px 100px 10px;
+  -webkit-box-shadow: 4px 4px 11px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 4px 11px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 4px 4px 11px 0px rgba(0, 0, 0, 0.75);
 
   #scr-border {
-    width: inherit;
-    height: 15rem;
-    padding: 3rem 1rem;
-    background-color: black;
+    width: 18rem;
+    height: 28rem;
+    padding: 2rem 1rem 0;
+    background-color: $dark-grey;
     border-radius: 10px 40px 10px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 
     #screen {
       padding: 0;
-      width: 100%;
-      height: 100%;
+      width: 14rem;
+      height: 14rem;
     }
 
     #logo {
@@ -50,8 +61,9 @@ body {
 
       h1 {
         font-family: 'Fugaz One', cursive;
-        font-size: 2rem;
-        color: #627071;
+        font-size: 1.5rem;
+        color: $grey;
+        padding: .1rem .5rem;
 
         >span {
           font-family: 'comic sans ms';
@@ -65,11 +77,11 @@ body {
         }
 
         :nth-child(2) {
-          color: #2B4796;
+          color: $blue;
         }
 
         :nth-child(3) {
-          color: #80AE41;
+          color: $light-green;
         }
 
         :nth-child(4) {
@@ -128,18 +140,16 @@ body {
 
 
         >div {
-          background-color: #2B4796;
+          background-color: $blue;
 
         }
 
-        #up,
         #down,
-        #left,
         #right {
-          -webkit-box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.75);
-          -moz-box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.75);
-          box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.75);
-          transition: all .2s ease-in-out;
+          -webkit-box-shadow: 1.5px 1.5px 9px 0px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 1.5px 1.5px 9px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 1.5px 1.5px 9px 0px rgba(0, 0, 0, 0.75);
+          transition: all .1s ease-in-out;
 
           &:active {
             -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
@@ -152,17 +162,39 @@ body {
         #up {
           grid-area: 1 / 2 / 2 / 3;
           border-radius: 10px 10px 0 0;
+          -webkit-box-shadow: 1.5px -1.5px 9px 0px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 1.5px -1.5px 9px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 1.5px -1.5px 9px 0px rgba(0, 0, 0, 0.75);
+          transition: all .1s ease-in-out;
 
+          &:active {
+            -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+            transform: skew(0deg, 0deg) translate(0px, 0px);
+          }
         }
 
         #left {
           grid-area: 2 / 1 / 3 / 2;
           border-radius: 10px 0 0 10px;
+          -webkit-box-shadow: -1.5px 1.5px 9px 0px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: -1.5px 1.5px 9px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: -1.5px 1.5px 9px 0px rgba(0, 0, 0, 0.75);
+          transition: all .1s ease-in-out;
+
+          &:active {
+            -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+            transform: skew(0deg, 0deg) translate(0px, 0px);
+          }
         }
 
         #right {
           grid-area: 2 / 3 / 3 / 4;
           border-radius: 0 10px 10px 0;
+
         }
 
         #down {
@@ -194,7 +226,7 @@ body {
           -webkit-box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.75);
           -moz-box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.75);
           box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.75);
-          transition: all .2s ease-in-out;
+          transition: all .1s ease-in-out;
 
           &:active {
             -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
@@ -211,7 +243,7 @@ body {
         }
 
         #b {
-          background-color: #80AE41;
+          background-color: $light-green;
           grid-area: 2 / 1 / 3 / 2;
           color: #516b2d;
         }
@@ -223,11 +255,11 @@ body {
         padding: 0;
         line-height: 2rem;
         font-family: 'Pokemon Solid', sans-serif;
-        font-size: 3rem;
-        color: #FFE546;
-        -webkit-text-stroke: #2B4796;
+        font-size: 2.4rem;
+        color: $yellow;
+        -webkit-text-stroke: $blue;
         -webkit-text-stroke-width: 2px;
-        text-shadow: 0px 0px 5px #2B4796;
+        text-shadow: 0px 0px 5px $blue;
         transform: translate(0px, -1.2rem)rotate(10deg);
       }
     }
@@ -236,8 +268,7 @@ body {
       display: flex;
       gap: 1.7rem;
 
-      #select,
-      #start {
+      > div {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -247,12 +278,12 @@ body {
         span {
           width: 2.2rem;
           height: .7rem;
-          background-color: #111212;
+          background-color: $dark-grey;
           border-radius: 7px;
           -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75);
           -moz-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75);
           box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75);
-          transition: all .2s ease-in-out;
+          transition: all .1s ease-in-out;
         }
 
         &:active {

@@ -15,15 +15,16 @@
       </div>
       <div id="mid">
         <div id="dpad">
-          <div id="up"></div>
-          <div id="down"></div>
-          <div id="left"></div>
-          <div id="right"></div>
           <div id="center"></div>
+          <div id="up" @click="faceTop"></div>
+          <div id="down" @click="faceBottom"></div>
+          <div id="left" @click="moveLeft"></div>
+          <div id="right" @click="moveRight"></div>
+
         </div>
         <div id="buttons">
-          <div id="b">B</div>
-          <div id="a">A</div>
+          <div id="b" @click="selectPokemon">B</div>
+          <div id="a" @click="returnHome">A</div>
         </div>
       </div>
       <div id="poketm">
@@ -32,12 +33,12 @@
       <div id="end">
 
 
-        <div id="select">
+        <div>
 
           <span></span>
           <p>SELECT</p>
         </div>
-        <div id="start">
+        <div>
 
           <span></span>
           <p>START</p>
@@ -54,10 +55,48 @@
 </template>
 
 <script>
+import { usePokemonStore } from "./stores/pokemon";
+
 export default {
+
   name: "App",
-  data: () => ({
-    //
-  }),
+  data: () => {
+    const pokemonStore = usePokemonStore();
+    return {
+      pokemonStore,
+      posicaoScroll: 50,
+
+    };
+  },
+  methods: {
+    moveLeft() {
+      this.pokemonStore.removeStep();
+      this.pokemonStore.changeFacing('left');
+      document.getElementById("scr-main").scrollLeft = this.posicaoScroll * this.pokemonStore.step;
+    },
+    moveRight() {
+      this.pokemonStore.addStep();
+      this.pokemonStore.changeFacing('right');
+      document.getElementById("scr-main").scrollLeft = this.posicaoScroll * this.pokemonStore.step;
+    },
+    faceTop() {
+      this.pokemonStore.changeFacing('back');
+    },
+    faceBottom() {
+      this.pokemonStore.changeFacing('front');
+    },
+    selectPokemon() {
+      if (this.pokemonStore.evolutionChain.length > 0) {
+
+        this.$router.push(`/pokemon/${this.pokemonStore.evolutionChain[this.pokemonStore.step].name}`)
+      }
+    },
+    returnHome() {
+      this.pokemonStore.step = 0;
+      this.pokemonStore.changeFacing('front');
+      document.getElementById("scr-main").scrollLeft = this.posicaoScroll * this.pokemonStore.step;
+      this.$router.push(`/`)
+    }
+  },
 };
 </script>

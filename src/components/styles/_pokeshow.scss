@@ -1,0 +1,68 @@
+@import '../../colors';
+
+#scr-container{
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: .5rem;
+}
+
+#ash{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transition: all .1s ease-in-out;
+    img{
+        width: 3rem;
+        aspect-ratio: 1/1;
+        object-fit: contain;
+    }
+}
+
+#pokemons-show {
+    display: grid;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: flex-start;
+
+}
+
+.pokemon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#picture {
+    max-width: 4rem;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    z-index: 8;
+}
+
+#name {
+    margin-top: -.4rem;
+    z-index: 9;
+    padding: .2rem;
+    background-color: $white;
+    border-radius: .3rem;
+    width: fit-content;
+    font-size: .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    border: 2px solid $grey;
+}
+
+a {
+    text-decoration: none;
+    color: $dark-grey;
+}

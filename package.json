@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@jamescoyle/vue-icon": "^0.1.2",
+    "@mdi/js": "^7.1.96",
     "pinia": "^2.0.30",
     "sass": "^1.58.0",
     "sass-loader": "^13.2.0",
