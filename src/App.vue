@@ -6,6 +6,11 @@
           <button @click="togglePlay"><svg-icon type="mdi" :path="pathVolumeOn" v-if="playing"></svg-icon><svg-icon
               v-else type="mdi" :path="pathVolumeOff"></svg-icon></button>
           <input type="range" min="0" max="1" step="0.01" v-model="volume" @input="changeVolume" />
+          <div><button @click="previousSong"><svg-icon type="mdi" :path="pathSkipPrevious"></svg-icon></button><button @click="nextSong"><svg-icon type="mdi" :path="pathSkipNext"></svg-icon></button></div>
+        </div>
+        <div id="select-menu" v-if="selectModal">
+          <h2>Autor<br/>Mateus Gotardi</h2>
+          <a href="https://mateusgotardi.vercel.app/" target="_blank"><img src="/assets/qrcode.svg" alt="qr code to https://mateusgotardi.vercel.app/"/></a>
         </div>
         <router-view />
       </section>
@@ -35,7 +40,7 @@
         <img src="/assets/pokelogo.svg" alt="poketm" />
       </div>
       <div id="end">
-        <div @click="setStart">
+        <div @click="()=>selectModal=!selectModal">
           <span></span>
           <p>SELECT</p>
         </div>
@@ -47,7 +52,7 @@
     </div>
   </div>
   <audio ref="audioPlayer">
-    <source src="/assets/theme-music.mp3" type="audio/mpeg">
+    <source :src="musicSrc" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
   <audio ref="buttonB">
@@ -63,8 +68,7 @@
 <script>
 import { usePokemonStore } from "./stores/pokemon";
 import SvgIcon from '@jamescoyle/vue-icon';
-import { mdiVolumeSource } from '@mdi/js';
-import { mdiVolumeMute } from '@mdi/js';
+import { mdiVolumeSource, mdiSkipNextOutline, mdiVolumeMute, mdiSkipPreviousOutline  } from '@mdi/js';
 
 export default {
   name: "App",
@@ -78,10 +82,15 @@ export default {
       playing: true,
       pathVolumeOn: mdiVolumeSource,
       pathVolumeOff: mdiVolumeMute,
+      pathSkipNext: mdiSkipNextOutline,
+      pathSkipPrevious: mdiSkipPreviousOutline,
       volume: 1,
       pokemonStore,
       scrollPosition: 50,
       startMenu: false,
+      selectModal: false,
+      musicChooser: 1,
+      musicSrc: `/assets/music1.mp3`,
     };
   },
   methods: {
@@ -135,11 +144,52 @@ export default {
     },
     changeVolume() {
       this.music.volume = this.volume;
+    },
+    previousSong() {
+      if (this.musicChooser > 1) {
+        this.musicChooser--;
+      } else {
+        this.musicChooser = 3;
+      }
+      this.musicSrc = `/assets/music${this.musicChooser}.mp3`;
+      this.music.load();
+      this.playMusic()
+      if(!this.playing) {
+        this.playing = true;
+      }
+    },
+    nextSong() {
+      if (this.musicChooser < 3) {
+        this.musicChooser++;
+      } else {
+        this.musicChooser = 1;
+      }
+      this.musicSrc = `/assets/music${this.musicChooser}.mp3`;
+      this.music.load();
+      this.playMusic()
+      if(!this.playing) {
+        this.playing = true;
+      }
+    },
+    playMusic() {
+      if (this.music.paused) {
+        this.music.play().catch(() => {
+          setTimeout(() => {
+            this.playMusic();
+          }, 500);
+        });
+      }
     }
   },
   mounted() {
     this.music = this.$refs.audioPlayer;
-    this.music.autoplay = true;
+    this.music.volume = this.volume;
+    this.pokemonStore.loading = true;
+    this.music.load()
+    this.playMusic();
+    setTimeout(() => {
+      this.pokemonStore.loading = false;
+    }, 2000);
     this.music.addEventListener('ended', () => {
       this.playing = false;
     });
