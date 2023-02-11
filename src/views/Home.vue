@@ -1,5 +1,6 @@
 <template>
-    <main id="scr-main" v-bind:style="{ backgroundPositionX: step + '%' }">
+  <Loading v-if="pokemonStore.loading" />
+    <main id="scr-main" v-bind:style="{ backgroundPositionX: step + '%' }" v-else>
       <div id="form-container">
         <form @submit.prevent="onSubmit">
           <label to="poke-input">Pesquise um Pokémon</label>
@@ -23,12 +24,14 @@ import { usePokemonStore } from "../stores/pokemon";
 import SvgIcon from '@jamescoyle/vue-icon';
 import { mdiMagnify } from '@mdi/js';
 import ShowPokemons from "../components/pokemonsShow.vue";
+import Loading from "../components/loading.vue";
 
 export default {
   name: "Home",
   components: {
     SvgIcon,
-    ShowPokemons
+    ShowPokemons,
+    Loading,
   },
   data() {
     const pokemonStore = usePokemonStore();

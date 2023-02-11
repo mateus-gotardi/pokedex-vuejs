@@ -1,5 +1,7 @@
 <template>
-   
+    <main>
+        <img src="/assets/pokelogo.svg" alt="poketm" id="loading"/>
+    </main>
 </template>
 
 <script>

@@ -1,5 +1,6 @@
 <template>
-  <main id="pokedex">
+  <Loading v-if="pokemonStore.loading" />
+  <main id="pokedex" v-else>
     <h1 id="poke-name">{{ pokemonStore.pokemonDetails.name.toUpperCase() }}</h1>
     <section v-if="pokemonStore.pokemonDetails.name !== ''" id="details">
       <div id="top-container">
@@ -61,9 +62,13 @@
 </template>
 <script>
 import { usePokemonStore } from "../stores/pokemon";
+import Loading from "../components/loading.vue";
 
 export default {
   name: "Pokemon",
+  components: {
+    Loading,
+  },
   data() {
     const pokemonStore = usePokemonStore();
 
