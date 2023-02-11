@@ -15,7 +15,7 @@
     overflow-x: scroll;
     overflow-y: hidden;
 
-    #form-container{
+    #form-container {
         display: flex;
         align-items: flex-start;
         justify-content: center;
@@ -88,5 +88,4 @@
     }
 
     background-image: url(/assets/map.svg);
-    background-attachment: scroll;
 }

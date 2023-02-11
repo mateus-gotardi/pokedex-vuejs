@@ -19,177 +19,248 @@
     #details {
         width: 100%;
         height: 100%;
+        display: flex;
+        flex-direction: column;
 
-        display: grid;
-        grid-template-columns: repeat(10, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-
-        #top-left {
-            grid-area: 1 / 1 / 2 / 5;
+        #top-container {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            justify-content: space-between;
 
-            img {
-                width: 6rem;
-                aspect-ratio: 1/1;
-                object-fit: contain;
-            }
+            #top-left {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-left: .5rem;
+                margin-bottom: .5rem;
 
-            h2 {
-                font-size: 1rem;
+                img {
+                    width: 6rem;
+                    aspect-ratio: 1/1;
+                    object-fit: contain;
+                }
+
+                h2 {
+                    font-size: .7rem;
+
+                }
+
+                ;
+
+
             }
 
             ;
 
-
-        }
-
-        ;
-
-        #top-right {
-            grid-area: 1 / 5 / 2 / 11;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            justify-content: flex-start;
-
-            #life-bar {
-                width: 2rem;
-                height: .2rem;
-                background-color: $green;
-            }
-
-            #hp {
-                font-size: .7rem;
-                margin: .2rem;
-            }
-
-            
-
-
-            #poke-type {
+            #top-right {
                 display: flex;
-                flex-wrap: wrap;
-                align-items: center;
+                flex-direction: column;
+                align-items: flex-end;
                 justify-content: flex-end;
+                border-right: 3px double $dark-grey;
+                border-bottom: 3px double $dark-grey;
+                margin-right: .5rem;
+                margin-bottom: .5rem;
 
-                span {
+                .info {
                     font-size: .7rem;
-                    margin-right: .2rem;
-                    margin-bottom: .2rem;
-                    padding: .1rem .3rem;
-                    border-radius: .3rem;
-                    border: $dark-grey 1px solid;
+                    margin: .2rem;
                 }
 
-                #normal {
-                    background-color: $beige;
-                    color: $white;
+                #sizes {
+                    h2 {
+                        font-size: .7rem;
+                        width: 100%;
+                        display: flex;
+                        justify-content: flex-end;
+                    }
                 }
 
-                #fighting {
-                    background-color: $orange;
-                    color: $white;
-                }
 
-                #flying {
-                    background-color: $light-yellow;
-                    color: $white;
-                }
 
-                #poison {
-                    background-color: $purple;
-                    color: $white;
-                }
+                #poke-type {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: flex-end;
 
-                #ground,
-                #rock {
-                    background-color: $brown;
-                    color: $white;
-                }
+                    span {
+                        font-size: .7rem;
+                        margin-right: .2rem;
+                        margin-bottom: .2rem;
+                        padding: .1rem .3rem;
+                        border-radius: .3rem;
+                        border: $dark-grey 1px solid;
+                    }
 
-                #bug {
-                    background-color: $green;
-                    color: $white;
-                }
+                    #normal {
+                        background-color: $beige;
+                        color: $dark-grey;
+                    }
 
-                #ghost,
-                #ice {
-                    background-color: $light-blue;
-                    color: $white;
-                }
+                    #fighting {
+                        background-color: $orange;
+                        color: $white;
+                    }
 
-                #steel {
-                    background-color: $dark-grey;
-                    color: $white;
-                }
+                    #flying {
+                        background-color: $yellow;
+                        color: $dark-grey;
+                    }
 
-                #fire {
-                    background-color: $red;
-                    color: $white;
-                }
+                    #poison {
+                        background-color: $purple;
+                        color: $white;
+                    }
 
-                #water {
-                    background-color: $blue;
-                    color: $white;
-                }
+                    #ground,
+                    #rock {
+                        background-color: $brown;
+                        color: $white;
+                    }
 
-                #grass {
-                    background-color: $light-green;
-                    color: $white;
-                }
+                    #bug {
+                        background-color: $green;
+                        color: $white;
+                    }
 
-                #electric {
-                    background-color: $yellow;
-                    color: $white;
-                }
+                    #ghost,
+                    #ice {
+                        background-color: $light-blue;
+                        color: $white;
+                    }
 
-                #psychic {
-                    background-color: $light-purple;
-                    color: $white;
-                }
+                    #steel {
+                        background-color: $dark-grey;
+                        color: $white;
+                    }
 
-                #dragon {
-                    background-color: $dark-red;
-                    color: $white;
-                }
+                    #fire {
+                        background-color: $red;
+                        color: $white;
+                    }
 
-                #dark {
-                    background-color: $dark-grey;
-                    color: $white;
-                }
+                    #water {
+                        background-color: $blue;
+                        color: $white;
+                    }
 
-                #fairy {
-                    background-color: $pink;
-                    color: $white;
-                }
+                    #grass {
+                        background-color: $light-green;
+                        color: $white;
+                    }
 
-                #shadow {
-                    background-color: $dark-blue;
-                    color: $white;
-                }
+                    #electric {
+                        background-color: $yellow;
+                        color: $blue;
+                    }
 
-                #unknown {
-                    background-color: $white;
-                    color: $dark-grey;
+                    #psychic {
+                        background-color: $light-purple;
+                        color: $white;
+                    }
+
+                    #dragon {
+                        background-color: $dark-red;
+                        color: $white;
+                    }
+
+                    #dark {
+                        background-color: $dark-grey;
+                        color: $white;
+                    }
+
+                    #fairy {
+                        background-color: $pink;
+                        color: $white;
+                    }
+
+                    #shadow {
+                        background-color: $dark-blue;
+                        color: $white;
+                    }
+
+                    #unknown {
+                        background-color: $white;
+                        color: $dark-grey;
+                    }
                 }
             }
         }
 
-        ;
+        #bottom-container {
+            display: flex;
 
-        #bottom-left {
-            grid-area: 2 / 1 / 3 / 6;
+            #bottom-left {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-left: .5rem;
+                letter-spacing: -1.2px;
+                border: 3px double $dark-grey;
+                padding: .2rem;
+                gap: .3rem;
+                width: 5rem;
+                height: fit-content;
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                }
+
+                h3 {
+                    font-size: .7rem;
+                }
+
+                h2 {
+                    font-size: .6rem;
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+
+                }
+            }
+
+
+
+            #bottom-right {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                letter-spacing: -1px;
+                padding: .5rem;
+
+                h3 {
+                    font-size: .8rem;
+                }
+
+                #abilities {
+                    h3 {
+                        margin-bottom: .3rem;
+                    }
+
+                    >div {
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        >span {
+                            font-size: .7rem;
+                            width: fit-content;
+                            margin-right: .2rem;
+                            margin-bottom: .2rem;
+                            padding: .1rem .3rem;
+                            border-radius: .3rem;
+                            background-color: $beige;
+                            border: $dark-grey 1px solid;
+                        }
+                    }
+                }
+            }
         }
 
-        ;
 
-        #bottom-right {
-            grid-area: 2 / 6 / 3 / 11;
-        }
 
-        ;
     }
 }

@@ -20,7 +20,6 @@
           <div id="down" @click="faceBottom"></div>
           <div id="left" @click="moveLeft"></div>
           <div id="right" @click="moveRight"></div>
-
         </div>
         <div id="buttons">
           <div id="b" @click="selectPokemon">B</div>
@@ -31,27 +30,17 @@
         <h1>Pokémon</h1>
       </div>
       <div id="end">
-
-
         <div>
-
           <span></span>
           <p>SELECT</p>
         </div>
         <div>
-
           <span></span>
           <p>START</p>
         </div>
       </div>
-
     </div>
-
-
-
   </div>
-
-
 </template>
 
 <script>

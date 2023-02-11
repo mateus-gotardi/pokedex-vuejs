@@ -1,20 +1,21 @@
 @import '../../colors';
 
-#scr-container{
+#scr-container {
     display: flex;
     align-items: flex-start;
     width: 100%;
     margin-bottom: .5rem;
 }
 
-#ash{
+#ash {
     display: flex;
     align-items: flex-end;
     justify-content: center;
     width: 100%;
     height: 100%;
     transition: all .1s ease-in-out;
-    img{
+
+    img {
         width: 3rem;
         aspect-ratio: 1/1;
         object-fit: contain;
@@ -23,20 +24,34 @@
 
 #pokemons-show {
     display: grid;
-    display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    align-items: flex-start;
+    background-image: url(/assets/map.svg);
+    height: 16rem;
 
+    @media only screen and (min-width: 480px) and (min-height: 790px) {
+        height: 17rem;
+    }
+
+    @media only screen and (min-width: 480px) and (min-height: 890px) {
+        height: 18rem;
+    }
+}
+
+#bcg {
+    background-image: url(/assets/map.svg);
+    z-index: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .pokemon {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
+    align-items: flex-start;
+    justify-content: flex-start;
+    z-index: 11;
 }
 
 #picture {
@@ -53,7 +68,7 @@
     background-color: $white;
     border-radius: .3rem;
     width: fit-content;
-    font-size: .3rem;
+    font-size: .4rem;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -24,6 +24,7 @@ export const usePokemonStore = defineStore('pokemons', {
         error: '',
         step: 0,
         facing: 'front',
+        loading: false,
     }),
     actions: {
         addStep() {
@@ -46,6 +47,7 @@ export const usePokemonStore = defineStore('pokemons', {
         },
 
         async fetchPokemonDetails(pokemonName) {
+            this.loading = true
             const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
             const data = await response.json()
             this.pokemonDetails = {
@@ -65,8 +67,10 @@ export const usePokemonStore = defineStore('pokemons', {
                     speed: data.stats[5].base_stat,
                 },
             }
+            this.loading = false
         },
         async fetchEvolutionChain(pokemonName) {
+            this.loading = true
             const response = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${pokemonName}`).then(async (response) => {
                 this.error = ''
                 const data = await response.json()
@@ -92,10 +96,12 @@ export const usePokemonStore = defineStore('pokemons', {
                         this.evolutionChain.push(poke)
                     })
                 })
+                this.loading = false
                 return response
             }).catch((error) => {
                 this.evolutionChain = []
                 this.error = 'Pokémon não encontrado'
+                this.loading = false
             })
 
         }
