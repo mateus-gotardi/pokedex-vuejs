@@ -30,7 +30,7 @@
         width: 13rem;
         border-radius: .5rem;
         border: 3px solid $grey;
-
+        background-color: $beige;
         >label,
         >h3 {
 
@@ -58,6 +58,7 @@
             align-items: center;
             justify-content: center;
             width: auto;
+            
 
             >input {
                 background-color: $beige;

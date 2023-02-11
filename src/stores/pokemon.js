@@ -80,7 +80,7 @@ export const usePokemonStore = defineStore('pokemons', {
                 this.step = 0
                 this.evolutionChain = []
                 // get sprites for each pokemon in the evolution chain
-                let pokeResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
+                let pokeResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${evolutionChainData.chain.species.name}`)
                 let pokeData = await pokeResponse.json()
                 let poke = { name: evolutionChainData.chain.species.name, sprites: pokeData.sprites }
                 this.evolutionChain.push(poke)

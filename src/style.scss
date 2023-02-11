@@ -119,6 +119,7 @@ body {
         border-radius: .5rem;
         background-color: $beige;
         cursor: pointer;
+        padding: .5rem;
       }
 
       >div {
@@ -126,6 +127,7 @@ body {
           background-color: $beige;
           cursor: pointer;
           border: 1px solid $grey;
+          padding: .5rem;
         }
 
         :first-child {
