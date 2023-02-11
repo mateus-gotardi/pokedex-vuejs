@@ -25,11 +25,13 @@ Para cada um dos pokémons listados (o pesquisado e suas evoluções), gostaría
 
 Quando clicarmos em um pokémon listado, listar suas principais características (hp, attack, defense, special attack, special defense e speed).
 
-# Resultado
+# [Resultado](https://pokedexgbc.vercel.app)
 
   - Como bom caçador de pokemon resolvi relembrar os tempos do Game Boy com um layout que imita o classico GBC, para ver os detalhes do pokemon basta clicar sobre ele, ou então usar os botões do Game Boy para se mover e escolher o pokemon apertando o botão B, para voltar basta pressionar A.
   - O site é responsivo e se adapta a diferentes tamanos de tela.
   - Como função extra adicionei músicas, você pode pausar, alterar o volume ou mudar de música clicando no start
+  - Deploy: https://pokedexgbc.vercel.app
+
 
 ![image](https://user-images.githubusercontent.com/98918812/218238187-6c41ecd7-d11a-4c1a-9570-1e3078411022.png)
 
